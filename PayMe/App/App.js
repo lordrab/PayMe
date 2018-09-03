@@ -1,0 +1,1 @@
+﻿var PayMe = angular.module("payme", []);
