@@ -53,9 +53,15 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Contract\IErrorLogService.cs" />
+    <Compile Include="Contract\IOrderService.cs" />
     <Compile Include="Contract\IProductService.cs" />
+    <Compile Include="ErrorLogService.cs" />
+    <Compile Include="Models\ErrorLogServiceModel.cs" />
+    <Compile Include="Models\OrderServiceModel.cs" />
     <Compile Include="Models\ProductServiceModel.cs" />
     <Compile Include="Models\SharedServiceModel.cs" />
+    <Compile Include="OrderService.cs" />
     <Compile Include="ProductService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

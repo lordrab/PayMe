@@ -1,0 +1,68 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+}
+
+<script src="~/App/Controller/Product/ProductCtrl.js"></script>
+<div ng-controller="productCtrl">
+    <br />
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-3">
+                <sub-heading heading="Our Great Products" />
+            </div>
+            <div class="col-sm-6">
+                <button class="btn shared-button glyphicon glyphicon-shopping-cart" onclick="myFunction()"></button>
+            </div>
+            <div class="col-sm-3">
+                <div class="shoppingcart-popup">
+                    <div id="myPopup" class="shoppingcart-popuptext">
+                        <div class="col-sm-12">
+                            <table class="table table-striped">
+                                <tr>
+                                    <th>Description</th>
+                                    <th>Qty</th>
+                                    <th>Price</th>
+                                </tr>
+                                <tr ng-repeat="row in shoppingCart">
+                                    <td>{{row.Description}}</td>
+                                    <td>{{row.Qty}}</td>
+                                    <td>{{row.Price}}</td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <table class="table table-striped">
+                    <tr>
+                        <th>Product Code</th>
+                        <th>Description</th>
+                        <th>Price</th>
+                        <th></th>
+                    </tr>
+                    <tr ng-repeat="row in productList">
+                        <td>{{row.Name}}</td>
+                        <td>{{row.Description}}</td>
+                        <td>{{row.Price}}</td>
+                        <td>
+                            <button class="btn shared-button glyphicon glyphicon-shopping-cart" ng-click="addOrderItem(row.Id,$index)">
+                                Add
+                            </button>
+
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    // When the user clicks on div, open the popup
+    function myFunction() {
+        var popup = document.getElementById("myPopup");
+        popup.classList.toggle("show");
+    }
+</script>

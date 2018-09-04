@@ -57,7 +57,13 @@ namespace PayMe.App_Start
 
                 kernel.Bind<IRepository<Person>>().To<Repository<Person>>();
                 kernel.Bind<IRepository<Product>>().To<Repository<Product>>();
+                kernel.Bind<IRepository<Order>>().To<Repository<Order>>();
+                kernel.Bind<IRepository<OrderItem>>().To<Repository<OrderItem>>();
+                kernel.Bind<IRepository<ErrorLog>>().To<Repository<ErrorLog>>();
+
                 kernel.Bind<IProductService>().To<ProductService>();
+                kernel.Bind<IOrderService>().To<OrderService>();
+                kernel.Bind<IErrorLogService>().To<ErrorLogService>();
 
                 RegisterServices(kernel);
                 return kernel;

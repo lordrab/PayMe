@@ -12,19 +12,12 @@ namespace PayMe.Model
     using System;
     using System.Collections.Generic;
     
-    public partial class Person
+    public partial class ErrorLog
     {
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public Person()
-        {
-            this.Orders = new HashSet<Order>();
-        }
-    
         public int Id { get; set; }
-        public string FirstName { get; set; }
-        public string LastName { get; set; }
-    
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Order> Orders { get; set; }
+        public string Location { get; set; }
+        public string Method { get; set; }
+        public string Error { get; set; }
+        public string OtherInfo { get; set; }
     }
 }

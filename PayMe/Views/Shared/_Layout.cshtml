@@ -1,16 +1,19 @@
 ﻿<!DOCTYPE html>
-<html>
+<html ng-app="payme">
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>@ViewBag.Title - My ASP.NET Application</title>
     @Styles.Render("~/Content/css")
     @Scripts.Render("~/bundles/modernizr")
+    <link href="~/App/CSS/Shared/Main.css" rel="stylesheet" />
     <script src="~/Scripts/angular.js"></script>
     <script src="~/App/App.js"></script>
     <script src="~/App/Service/HttpService.js"></script>
+    <script src="~/App/Controller/Shared/NavCtrl.js"></script>
+    <script src="~/App/Directive/Subheading.js"></script>
 </head>
-<body ng-app="payme">
+<body >
     <div class="navbar navbar-inverse navbar-fixed-top">
         <div class="container">
             <div class="navbar-header">
@@ -21,11 +24,14 @@
                 </button>
                 @Html.ActionLink("Application name", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
             </div>
-            <div class="navbar-collapse collapse">
+            <div class="navbar-collapse collapse" ng-controller="navCtrl">
                 <ul class="nav navbar-nav">
-                    <li>@Html.ActionLink("Home", "Index", "Home")</li>
-                    <li>@Html.ActionLink("About", "About", "Home")</li>
-                    <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
+                    @*<li>@Html.ActionLink("Home", "Index", "Home")</li>
+                    <li>@Html.ActionLink("Product", "Index", "Product")</li>
+                    <li>@Html.ActionLink("Contact", "Contact", "Home")</li>*@
+                    <li><a ng-click="menuLink('/Home')">Home</a></li>
+                    <li><a ng-click="menuLink('/Product')">Product</a></li>
+                    <li><a ng-click="menuLink('/Home/Contact')">Contact</a></li>
                 </ul>
                 @Html.Partial("_LoginPartial")
             </div>

@@ -220,7 +220,10 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="App\App.js" />
-    <Content Include="App\Controller\Home\Home.js" />
+    <Content Include="App\Controller\Product\ProductCtrl.js" />
+    <Content Include="App\Controller\Shared\NavCtrl.js" />
+    <Content Include="App\CSS\Shared\Main.css" />
+    <Content Include="App\Directive\Subheading.js" />
     <Content Include="App\Service\HttpService.js" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
@@ -1057,10 +1060,11 @@
     <Content Include="Views\Shared\Lockout.cshtml" />
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
     <Content Include="Scripts\version.json" />
+    <Content Include="Views\Product\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="App\Controller\Home\" />
     <Folder Include="App_Data\" />
-    <Folder Include="Views\Product\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />

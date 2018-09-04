@@ -12,21 +12,15 @@ namespace PayMe.Model
     using System;
     using System.Collections.Generic;
     
-    public partial class Product
+    public partial class OrderItem
     {
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public Product()
-        {
-            this.OrderItems = new HashSet<OrderItem>();
-        }
-    
         public int Id { get; set; }
-        public string Name { get; set; }
-        public string Description { get; set; }
+        public int ProductId { get; set; }
+        public int OrderId { get; set; }
+        public int Qty { get; set; }
         public decimal Price { get; set; }
-        public int Stock { get; set; }
     
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<OrderItem> OrderItems { get; set; }
+        public virtual Order Order { get; set; }
+        public virtual Product Product { get; set; }
     }
 }

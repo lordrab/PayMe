@@ -7,6 +7,12 @@
       <Diagram DiagramId="4ab22a2d499b4a19968f49cd1a2df31b" Name="Diagram1">
         <EntityTypeShape EntityType="PayMeModel.Person" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
         <EntityTypeShape EntityType="PayMeModel.Product" Width="1.5" PointX="3.375" PointY="0.75" />
+        <EntityTypeShape EntityType="PayMeModel.Order" Width="1.5" PointX="3" PointY="3.75" />
+        <EntityTypeShape EntityType="PayMeModel.OrderItem" Width="1.5" PointX="5.625" PointY="2" />
+        <AssociationConnector Association="PayMeModel.FK_Order_Person" />
+        <AssociationConnector Association="PayMeModel.FK_OrderItem_Order" />
+        <AssociationConnector Association="PayMeModel.FK_OrderItem_Product" />
+        <EntityTypeShape EntityType="PayMeModel.ErrorLog" Width="1.5" PointX="5.375" PointY="5.75" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

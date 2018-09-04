@@ -1,0 +1,143 @@
+﻿body {
+}
+
+ /*directive subHeading*/
+.dir-subheading {
+    background-color: #ffffff;
+    border: 0px;
+    border-bottom: 1px;
+    border-style: solid;
+    border-color: #0f6c96;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    color: #000000;
+}
+/* Shared button */
+.shared-button {
+    color: #ffffff;
+    background-color: #0f6c96;
+    height: 26px;
+    padding-top: 2px;
+}
+.shared-button:focus {
+        color: #ffffff;
+        background-color: #0f6c96;
+        height: 26px;
+        padding-top: 2px;
+}
+.shared-button:hover {
+        color: #ffffff;
+        background-color: #0f6c96;
+        height: 26px;
+        padding-top: 2px;
+}
+
+.shared-button-green {
+    color: #ffffff;
+    background-color: #70dd8f;
+    height: 26px;
+    padding-top: 2px;
+}
+.shared-button-green:focus {
+    color: #ffffff;
+    background-color: #70dd8f;
+    height: 26px;
+    padding-top: 2px;
+}
+.shared-button-green:hover {
+    color: #ffffff;
+    background-color: #70dd8f;
+    height: 26px;
+    padding-top: 2px;
+}
+.shared-button-red {
+    color: #ffffff;
+    background-color: #ea2931;
+    height: 26px;
+    padding-top: 2px;
+}
+.shared-button-red:focus {
+    color: #ffffff;
+    background-color: #ea2931;
+    height: 26px;
+    padding-top: 2px;
+}
+.shared-button-red:hover {
+    color: #ffffff;
+    background-color: #ea2931;
+    height: 26px;
+    padding-top: 2px;
+}
+.shared-boxback {
+    border: 1px;
+    border-radius: 5px;
+    border-color: rgba(213, 219, 221, 0.8);
+    border-style: solid;
+    z-index: 1000;
+    background-color: rgba(213, 219, 221, 1.0);
+}
+.shared-qtybox {
+    width: 180px;
+    padding: 5px;
+    
+}
+.shared-qtyinputbox {
+    width: 40px;
+}
+/* Shopping Cart Button*/
+.shoppingcart-button {
+    margin-top: 20px;
+}
+.shoppingcart-popup {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+.shoppingcart-popup .shoppingcart-popuptext {
+    visibility: hidden;
+    width: 360px;
+    height: 600px;
+    background-color: rgba(213, 219, 221, 1.0);
+    color: #000000;
+    text-align: center;
+    border-radius: 6px;
+    padding: 8px 0;
+    position: absolute;
+    z-index: 1;
+    /*bottom: 125%;*/
+    left: 50%;
+    margin-left: -80px;
+    margin-top: -20px;
+}
+.shoppingcart-popup .show {
+    visibility: visible;
+    -webkit-animation: fadeIn 1s;
+    animation: fadeIn 1s;
+}
+
+.shoppingcart-popup .shoppingcart-popuptext::after {
+}
+/* Add animation (fade in the popup) */
+@-webkit-keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}

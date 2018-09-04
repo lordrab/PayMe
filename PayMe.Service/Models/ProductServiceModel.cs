@@ -20,4 +20,11 @@ namespace PayMe.Service.Models
     {
         public List<ProductServiceListModel> ProductData { get; set; }
     }
+
+    public class ProductServiceAddEditModel : SharedServiceModel
+    {
+        public int OrderId { get; set; }
+        public decimal Price { get; set; }
+        public int Qty { get; set; }
+    }
 }

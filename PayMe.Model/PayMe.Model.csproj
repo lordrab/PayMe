@@ -55,6 +55,15 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ErrorLog.cs">
+      <DependentUpon>PayMeModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Order.cs">
+      <DependentUpon>PayMeModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="OrderItem.cs">
+      <DependentUpon>PayMeModel.tt</DependentUpon>
+    </Compile>
     <Compile Include="PayMeModel.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
